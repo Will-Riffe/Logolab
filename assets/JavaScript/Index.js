@@ -41,6 +41,10 @@ const prompts = [
 
 
 
+
+
+
+
 /* Defines function to write data; goes to file using fs module
    Logs an error for the file if everything goes to $#!7.            */
 function fileWrite(fileName, data) {
@@ -51,6 +55,8 @@ function fileWrite(fileName, data) {
 
 
 
+
+
 /*  Defines func. "init," short for "initialize." This one prompts 
     the user with the "prompts" parameter I made earlier, then 
     logs them to the console.                                        */
@@ -58,9 +64,11 @@ function init() {
     inquirer.prompt(prompts).then(response => {
         console.log(response);
 
+
         /* Here we write the JSON string to a file                  */
         const data = JSON.stringify(response, null, 1);
         fileWrite('logo-params.json', data);
+
 
         /*  Here we reference the script which will convert the 
             JSON data into the SVG file, log it to the console,
@@ -75,5 +83,8 @@ function init() {
 
     });
 }
+
+
+
 
 init();
