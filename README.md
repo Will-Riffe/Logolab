@@ -12,7 +12,7 @@
   - [Questions](#questions)
 
   ## Installation
-  There are multiple ways to install. One method is to download a zip version of the file from the repository at https://github.com/Will-Riffe/ReadMe-Gen and extract the contents. Alternatively, you can follow Github command line instructions for Bash (or similar console) to create a copy or fork.
+  There are multiple ways to install. One method is to download a zip version of the file from [my repository](https://github.com/Will-Riffe/Logolab) and extract the contents. Alternatively, you can follow Github command line instructions for Bash (or similar console) to create a copy or fork.
 
   ## Usage
   The following Walkthrough Video should sufficiently demonstrate the capabilities of this project, as well as instruct you on how to use it.
