@@ -20,7 +20,7 @@ function prompts(){
             {
                 type: 'list',
                 message: 'What border shape would you like for your logo?',
-                choices: ['Square', 'Circle', 'Triangle'],
+                choices: ['Circle', 'Ellipse', 'Square', 'Triangle'],
                 name: 'shape',
             },
             {
