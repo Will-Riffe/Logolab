@@ -23,19 +23,8 @@ const prompts = [
     },
     {
         type: 'input',
-        message: 'List a color name or hex code for the border shape color:',
-        name: 'bordershapecolor',
-    },
-    {
-        type: 'list',
-        message: 'What inner shape would you like for your logo?',
-        choices: ['Diamond', 'Circle', 'Flipped Triangle'],
-        name: 'shape',
-    },
-    {
-        type: 'input',
-        message: 'List a color name or hex code for the inner shape color:',
-        name: 'innershapecolor',
+        message: 'List a color name or hex code for the shape color:',
+        name: 'shapecolor',
     },
 ];
 
