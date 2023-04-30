@@ -31,8 +31,8 @@ function prompts(){
         ])
 
         //Reruns if user enters > 3 characters
-        .then((answers) => {
-            if (answers.text.length > 3) {
+        .then((input) => {
+            if (input.text.length > 3 || input.length == "" ) {
                 console.log('Must ennter up to three characthers');
                 promptUser();
             } else {
