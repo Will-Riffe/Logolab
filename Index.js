@@ -1,7 +1,9 @@
 // Establishing inquirer and fs... and our SVG ls code (SVGenerate)
 const inquirer = require('inquirer');
 const fs = require('fs');
-const SVGenerate = require('')
+const SVGenerate = require('./lib/SVGenerate');
+const { Circle, Ellipse, Square, Triangle } = require('./shape');
+
 
 // This is our array of objects used for user prompts
 function prompts(){
@@ -32,11 +34,11 @@ function prompts(){
 
         //Reruns if user enters > 3 characters
         .then((input) => {
-            if (input.text.length > 3 || input.length == "" ) {
+            if (input.logotext.length > 3 || input.logotext.length == "" ) {
                 console.log('Must ennter up to three characthers');
                 promptUser();
             } else {
-                writetoFile('logo.svg', answers);
+                writetoFile('logo.svg', input);
             }
         })
 }
@@ -48,7 +50,7 @@ promptUser();
    Logs an error for the file if everything goes to $#!7.            
 */
 function fileWrite(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
+    fs.fileWrite(fileName, data, (err) =>
         err ? console.error(err) : console.log(`Generated ${fileName}`),
     );
 };
