@@ -1,4 +1,4 @@
-/* Establishing inquirer and fs... and our SVG ls code (SVGenerate) */
+// Establishing inquirer and fs... and our SVG ls code (SVGenerate)
 const inquirer = require('inquirer');
 const fs = require('fs');
 const SVGenerate = require('')
@@ -43,8 +43,10 @@ function prompts(){
 promptUser();
 
 
-/* Defines function to write data; goes to file using fs module
-   Logs an error for the file if everything goes to $#!7.            */
+/* 
+    Defines function to write data; goes to file using fs module
+   Logs an error for the file if everything goes to $#!7.            
+*/
 function fileWrite(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
         err ? console.error(err) : console.log(`Generated ${fileName}`),
@@ -52,22 +54,26 @@ function fileWrite(fileName, data) {
 };
 
 
-/*  Defines func. "init," short for "initialize." This one prompts 
+/*  
+    Defines func. "init," short for "initialize." This one prompts 
     the user with the "prompts" parameter I made earlier, then 
-    logs them to the console.                                        */
+    logs them to the console.                                        
+*/
 function init() {
     inquirer.prompt(prompts).then(response => {
         console.log(response);
 
 
-        /* Here we write the JSON string to a file                  */
+        // Here we write the JSON string to a file.
         const data = JSON.stringify(response, null, 1);
         fileWrite('logo-params.json', data);
 
 
-        /*  Here we reference the script which will convert the 
+        /* 
+            Here we reference the script which will convert the 
             JSON data into the SVG file, log it to the console,
-            then, finally, we actually generate the SVG             */
+            then, finally, we actually generate the SVG             
+        */
         const svgCon = SVGenerate(JSON.parse(data));
         console.log(svgCon);
         fileWrite(`./examples/logo.svg`, svgCon);
