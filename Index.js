@@ -1,5 +1,5 @@
 // Establishing inquirer and fs... and our SVG ls code (SVGenerate)
-const inquirer = require('inquirer');
+const inquirer = await import('inquirer');
 const fs = require('fs');
 const SVGenerate = require('')
 
@@ -30,7 +30,7 @@ function prompts(){
             },
         ])
 
-        //Reruns if user enters > 3 characters
+        //Reruns if user enters > 3 characters, or none
         .then((input) => {
             if (input.text.length > 3 || input.length == "" ) {
                 console.log('Must ennter up to three characthers');
