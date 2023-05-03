@@ -1,6 +1,6 @@
 // Establishing inquirer and fs... and our SVG ls code (SVGenerate)
-const inquirer = require('inquirer');
 const fs = require("fs");
+const inquirer = require('inquirer');
 const SVGenerate = require("./lib/SVGenerate");
 
 // This is our array of objects used for user prompts
