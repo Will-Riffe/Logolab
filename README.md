@@ -24,6 +24,9 @@
   ## Contributing
   There are none at this time.
 
+  ## Attribution
+  I based much of my code on an SVG generator from another user, [gabrielaortiz6](https://github.com/gabrielaortiz6/logo-generator), though certainly with differences in the code, especially in regard to the SVGenerate file.
+
   ## Tests
   N/A
 
