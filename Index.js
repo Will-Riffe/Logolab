@@ -50,15 +50,20 @@ function init() {
       console.log(response);
 
       // Here we write the JSON string to a file.
-      const data = JSON.stringify(response, null, 1);
-      fileWrite("logo-params.json", data);
+      const data = {
+        shape: response.shape,
+        shapecolor: response.shapecolor,
+        textcolor: response.txtcolor,
+        text: response.logotxt, // Updated to use user's input
+      };
+      fileWrite("logo-params.json", JSON.stringify(data, null, 1));
 
       /* 
             Here we reference the script which will convert the 
             JSON data into the SVG file, log it to the console,
             then, finally, we actually generate the SVG             
         */
-      const svgCon = SVGenerate(JSON.parse(data));
+      const svgCon = SVGenerate(data);
       console.log(svgCon);
       fileWrite(`./examples/logo.svg`, svgCon);
     })

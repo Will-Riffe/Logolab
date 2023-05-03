@@ -1,6 +1,6 @@
 {
- "logotxt": "asd",
- "txtcolor": "red",
  "shape": "Circle",
- "shapecolor": "green"
+ "shapecolor": "red",
+ "textcolor": "blue",
+ "text": "zse"
 }
