@@ -1,7 +1,0 @@
-
-      <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="150" r="150"
-        fill="gold" />
-        <text x="50%" y="55%" text-anchor="middle" fill="teal" font-size="150">asd</text>
-        </svg>
-    
